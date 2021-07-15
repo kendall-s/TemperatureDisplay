@@ -331,7 +331,6 @@ class DataAcquirer(QObject):
             print('Data acquiring')
             try:
                 string_sent = self.serial_object.readline()
-
                 string_sent = str(string_sent)
 
                 if 'T' in string_sent:
