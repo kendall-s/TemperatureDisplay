@@ -299,9 +299,9 @@ class MainWindow(QMainWindow):
         # Update the raw chart and display the latest signal value
         self.plotted_data.setData(self.plot_x, self.plot_y)
 
-        self.current_temp.setText(f'{new_data[0]} °C')
+        self.current_temp.setText(f'<b>{new_data[0]} °C</b>')
         if len(self.plot_y) > 2:
-            self.stdev_temp.setText(f'{round(statistics.stdev(self.plot_y), 4)} °C')
+            self.stdev_temp.setText(f'<b>{round(statistics.stdev(self.plot_y), 4)} °C</b>')
 
 
 class DataAcquirer(QObject):
